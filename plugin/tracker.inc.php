@@ -470,9 +470,9 @@ class Tracker_field_radio extends Tracker_field_format
 			$checked = trim($option[0]) == trim($this->default_value) ? ' checked="checked"' : '';
 			++$id;
 			$s_id = '_p_tracker_' . $s_name . '_' . $this->id . '_' . $id;
-			$retval .= '<input type="radio" name="' .  $s_name . '" id="' . $s_id .
+			$retval .= '<label><input type="radio" name="' .  $s_name . '" id="' . $s_id .
 				'" value="' . $s_option . '"' . $checked . '>' .
-				'<label for="' . $s_id . '">' . $s_option . '</label>' . "\n";
+				'<span>' . $s_option . '</span></label>' . "\n";
 		}
 
 		return $retval;

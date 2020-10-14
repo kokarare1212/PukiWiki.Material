@@ -114,10 +114,10 @@ $msg
 <form action="$script" method="post">
  <div>
   <input type="hidden" name="plugin" value="rename">
-  <input type="radio"  name="method" id="_p_rename_page" value="page"$radio_page>
-  <label for="_p_rename_page">{$_rename_messages['msg_page']}:</label>$select_refer<br>
-  <input type="radio"  name="method" id="_p_rename_regex" value="regex"$radio_regex>
-  <label for="_p_rename_regex">{$_rename_messages['msg_regex']}:</label><br>
+  
+  <label><input type="radio"  name="method" id="_p_rename_page" value="page"$radio_page><span>{$_rename_messages['msg_page']}:</span></label>$select_refer<br>
+  
+  <label><input type="radio"  name="method" id="_p_rename_regex" value="regex"$radio_regex><span>{$_rename_messages['msg_regex']}:</span></label><br>
   <label for="_p_rename_from">From:</label><br>
   <input type="text" name="src" id="_p_rename_from" size="80" value="$s_src"><br>
   <label for="_p_rename_to">To:</label><br>

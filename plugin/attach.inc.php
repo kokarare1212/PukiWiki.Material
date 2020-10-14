@@ -532,36 +532,36 @@ class AttachFile
 		$msg_rename  = '';
 		if ($this->age) {
 			$msg_freezed = '';
-			$msg_delete  = '<input type="radio" name="pcmd" id="_p_attach_delete" value="delete">' .
-				'<label for="_p_attach_delete">' .  $_attach_messages['msg_delete'] .
-				$_attach_messages['msg_require'] . '</label><br>';
+			$msg_delete  = '' .
+				'<label><input type="radio" name="pcmd" id="_p_attach_delete" value="delete"><span>' .  $_attach_messages['msg_delete'] .
+				$_attach_messages['msg_require'] . '</span></label><br>';
 			$msg_freeze  = '';
 		} else {
 			if ($this->status['freeze']) {
 				$msg_freezed = "<dd>{$_attach_messages['msg_isfreeze']}</dd>";
 				$msg_delete  = '';
-				$msg_freeze  = '<input type="radio" name="pcmd" id="_p_attach_unfreeze" value="unfreeze">' .
-					'<label for="_p_attach_unfreeze">' .  $_attach_messages['msg_unfreeze'] .
-					$_attach_messages['msg_require'] . '</label><br>';
+				$msg_freeze  = '' .
+					'<label><input type="radio" name="pcmd" id="_p_attach_unfreeze" value="unfreeze"><span>' .  $_attach_messages['msg_unfreeze'] .
+					$_attach_messages['msg_require'] . '</span></label><br>';
 			} else {
 				$msg_freezed = '';
-				$msg_delete = '<input type="radio" name="pcmd" id="_p_attach_delete" value="delete">' .
-					'<label for="_p_attach_delete">' . $_attach_messages['msg_delete'];
+				$msg_delete = '' .
+					'<label><input type="radio" name="pcmd" id="_p_attach_delete" value="delete"><span>' . $_attach_messages['msg_delete'];
 				if (PLUGIN_ATTACH_DELETE_ADMIN_ONLY || $this->age)
 					$msg_delete .= $_attach_messages['msg_require'];
-				$msg_delete .= '</label><br>';
-				$msg_freeze  = '<input type="radio" name="pcmd" id="_p_attach_freeze" value="freeze">' .
-					'<label for="_p_attach_freeze">' .  $_attach_messages['msg_freeze'] .
-					$_attach_messages['msg_require'] . '</label><br>';
+				$msg_delete .= '</span></label><br>';
+				$msg_freeze  = '' .
+					'<label><input type="radio" name="pcmd" id="_p_attach_freeze" value="freeze"><span>' .  $_attach_messages['msg_freeze'] .
+					$_attach_messages['msg_require'] . '</span></label><br>';
 
 				if (PLUGIN_ATTACH_RENAME_ENABLE) {
-					$msg_rename  = '<input type="radio" name="pcmd" id="_p_attach_rename" value="rename">' .
-						'<label for="_p_attach_rename">' .  $_attach_messages['msg_rename'] .
-						$_attach_messages['msg_require'] . '</label><br>&nbsp;&nbsp;&nbsp;&nbsp;' .
-						'<label for="_p_attach_newname">' . $_attach_messages['msg_newname'] .
-						':</label> ' .
+					$msg_rename  = '' .
+						'<label><input type="radio" name="pcmd" id="_p_attach_rename" value="rename"><span>' .  $_attach_messages['msg_rename'] .
+						$_attach_messages['msg_require'] . '</span></label><br>&nbsp;&nbsp;&nbsp;&nbsp;' .
+						'<label>'  .
+						'' .
 						'<input type="text" name="newname" id="_p_attach_newname" size="40" value="' .
-						$this->file . '"><br>';
+						$this->file . '">:'. $_attach_messages['msg_newname'].'</label> <br>';
 				}
 			}
 		}

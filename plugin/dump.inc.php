@@ -235,10 +235,10 @@ function plugin_dump_disp_form()
 
 <p><strong>アーカイブの形式</strong>
 <br>
-  <input type="radio" name="pcmd" id="_p_dump_tgz" value="tgz" checked="checked">
-  <label for="_p_dump_tgz"> ～.tar.gz 形式</label><br>
-  <input type="radio" name="pcmd" id="_p_dump_tar" value="tar">
-  <label for="_p_dump_tar">～.tar 形式</label>
+  
+  <label><input type="radio" name="pcmd" id="_p_dump_tgz" value="tgz" checked="checked"><span> ～.tar.gz 形式</span></label><br>
+  
+  <label><input type="radio" name="pcmd" id="_p_dump_tar" value="tar"><span>～.tar 形式</span></label>
 </p>
 <p><strong>バックアップディレクトリ</strong>
 <br>
